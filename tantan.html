@@ -273,6 +273,45 @@
     }
     .about-box a:hover { text-decoration: underline; }
 
+    /* --- RESPONSIVE ABOUT ME VIDEO CONTAINER --- */
+    .video-box {
+      margin-top: 25px;
+      background: #131822;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    
+    .video-box h2 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 1px;
+      border-left: 3px solid var(--neon-purple);
+      padding-left: 10px;
+      text-transform: uppercase;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     /* --- SYSTEM QUEST LANDING PAGE WITH VIDEO BACKGROUND --- */
     .login-page {
       position: relative;
@@ -514,18 +553,6 @@
       border-color: var(--neon-purple);
     }
 
-    /* 2:3 Vertical Aspect Ratio Style rule */
-    .hobby-video {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 12px;
-      border: 1px solid #242f42;
-      background: #0d121a;
-    }
-
     .hobby-card h4,
     .favorite-card h4,
     .story-card h4 {
@@ -686,7 +713,7 @@
       </div>
 
       <div class="hero-banner">
-        <img src="photo/jinwoo.gif  " alt="Banner GIF">
+        <img src="photo/jinwoo.gif" alt="Banner GIF">
       </div>
 
       <div class="profile-card">
@@ -727,9 +754,6 @@
             <div class="hobbies-grid">
               
               <div class="hobby-card">
-                <video class="hobby-video" autoplay loop muted playsinline>
-                  <source src="video/video (3).mp4" type="video/mp4">
-                </video>
                 <h4>Scrolling TikTok</h4>
                 <p>
                   I enjoy scrolling TikTok because it helps me relax and discover fun videos,
@@ -738,9 +762,6 @@
               </div>
 
               <div class="hobby-card">
-                <video class="hobby-video" autoplay loop muted playsinline>
-                  <source src="video/video (4).mp4" type="video/mp4">
-                </video>
                 <h4>Working Out</h4>
                 <p>
                   I like working out because it helps me stay healthy, build discipline,
@@ -749,9 +770,6 @@
               </div>
 
               <div class="hobby-card">
-                <video class="hobby-video" autoplay loop muted playsinline>
-                  <source src="video/video (1).mp4" type="video/mp4">
-                </video>
                 <h4>Watching Movies</h4>
                 <p>
                   I enjoy watching movies because they help me relax, enjoy good stories,
@@ -820,6 +838,16 @@
               I want to keep learning, improving myself, and staying focused on my dreams.
               Every day is a chance to become better and move closer to my goals.
             </p>
+          </div>
+
+          <div class="video-box">
+            <h2>Featured Video</h2>
+            <div class="video-wrapper">
+              <video controls preload="metadata">
+                <source src="video/tan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
         </section>
